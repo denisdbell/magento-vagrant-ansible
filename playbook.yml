@@ -21,6 +21,6 @@
      - libapache2-mod-php5
      - php5-mcrypt
   - name: clone maagento
-    git: repo=https://github.com/denisdbell/magento.git dest=var/www/magento
+    git: repo=https://github.com/denisdbell/magento.git dest=/var/www/magento
   - name: create magento database
     shell: mysql -u root < /var/www/magento/magento.sql
