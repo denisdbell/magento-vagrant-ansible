@@ -1,0 +1,26 @@
+---
+- hosts: all
+  sudo: yes
+  tasks:
+  - name: Update cache
+    apt: update_cache=yes
+  - name: install git
+    apt: pkg=git state=latest
+  - name: Install Apache
+    apt: pkg=apache2
+  - name: install mysql
+    apt: pkg={{ item }} state=latest
+    with_items:
+     - mysql-server
+     - libapache2-mod-auth-mysql
+     - php5-mysql
+  - name: install php
+    apt: pkg={{ item }} state=latest
+    with_items:
+     - php5
+     - libapache2-mod-php5
+     - php5-mcrypt
+  - name: clone maagento
+    git: repo=https://github.com/denisdbell/magento.git dest=var/www/magento
+  - name: create magento database
+    shell: mysql -u root < /var/www/magento/magento.sql
