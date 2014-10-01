@@ -26,7 +26,7 @@ How To Run
 ----------
 MySQL
 -------------
-> **Username:** root **Password:** <no password>
+> **Username:** root **Password:** none
 > *Database:** magento
 
 ----------
