@@ -20,7 +20,19 @@
      - php5
      - libapache2-mod-php5
      - php5-mcrypt
+     - php5-curl
+     - php5-gd
   - name: clone maagento
-    git: repo=https://github.com/denisdbell/magento.git dest=var/www/magento
+    git: repo=https://github.com/denisdbell/magento.git dest=/home/vagrant/magento
+  - name: change file permissions for magento
+    shell: chmod -R 777 /home/vagrant/magento
+  - name: copy apache configuration
+    copy: src=default dest=/etc/apache2/sites-available/default backup=yes
   - name: create magento database
-    shell: mysql -u root < /var/www/magento/magento.sql
+    shell: mysql -u root < /home/vagrant/magento/magento.sql
+  #- name: change file permissions on apache2.conf
+  #  file: path=/etc/apache2/apache2.conf mode=7777
+  - name: append ServerName localhost to apache2.conf file
+    shell: sudo echo "ServerName localhost" >> /etc/apache2/apache2.conf
+  - name: start apache
+    shell: service apache2 restart
