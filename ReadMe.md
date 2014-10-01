@@ -27,7 +27,7 @@ How To Run
 MySQL
 -------------
 > **Username:** root **Password:** none
-> *Database:** magento
+> **Database:** magento
 
 ----------
 Apache
