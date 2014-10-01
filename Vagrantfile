@@ -18,6 +18,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "forwarded_port", guest: 80, host: 9080
 
-   config.vm.synced_folder "magento/", "/var/www/magento"
+   config.vm.synced_folder "magento/", "/home/vagrant/magento"
 
 end
