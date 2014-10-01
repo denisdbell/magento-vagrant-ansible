@@ -24,3 +24,12 @@ How To Run
   4. **vagrant up**
 
 ----------
+MySQL
+-------------
+> **Username:** root **Password:** <no password>
+> *Database:** magento
+
+----------
+Apache
+-------------
+> Access magento on **port 9080** eg **http://localhost:9080/magento**
