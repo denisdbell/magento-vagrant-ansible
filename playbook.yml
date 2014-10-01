@@ -30,8 +30,6 @@
     copy: src=default dest=/etc/apache2/sites-available/default backup=yes
   - name: create magento database
     shell: mysql -u root < /home/vagrant/magento/magento.sql
-  #- name: change file permissions on apache2.conf
-  #  file: path=/etc/apache2/apache2.conf mode=7777
   - name: append ServerName localhost to apache2.conf file
     shell: sudo echo "ServerName localhost" >> /etc/apache2/apache2.conf
   - name: start apache

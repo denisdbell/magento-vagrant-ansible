@@ -1,4 +1,4 @@
-Java Vagrant Box
+Magento Vagrant and Ansible
 =======================
 
 
@@ -19,9 +19,8 @@ How To Run
 > **The steps to initialize the java vagrant box is as follows:**
 
   1. Open a terminal window.
-  2. **git clone** https://github.com/medullan/starter-stacks.git
-  3. **cd** starter-statcks
-  4. **cd** java
-  5. **vagrant up**
+  2. **git clone**  https://github.com/denisdbell/magento-vagrant-ansible.git
+  3. **cd** magento-vagrant-ansible 
+  4. **vagrant up**
 
 ----------
